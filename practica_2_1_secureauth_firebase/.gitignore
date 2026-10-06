@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Firebase local/emuladores
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Build
+dist/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

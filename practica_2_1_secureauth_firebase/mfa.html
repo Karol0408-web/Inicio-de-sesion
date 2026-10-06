@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar MFA - SecureAuth</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <main class="center-shell">
+    <section class="auth-card wide">
+      <span class="badge">Segundo factor</span>
+      <h1>Configura MFA</h1>
+      <p class="muted">
+        Para proteger tu cuenta, registra un número telefónico como segundo factor.
+        Firebase utilizará un código SMS y reCAPTCHA durante el proceso.
+      </p>
+
+      <div id="mfa-enroll-step">
+        <label for="phone-number">Número telefónico</label>
+        <input id="phone-number" type="tel" placeholder="+523312345678">
+        <div id="recaptcha-container"></div>
+        <button id="send-code" class="primary-btn">Enviar código</button>
+        <div id="mfa-code-area" class="hidden">
+          <label for="verification-code">Código recibido por SMS</label>
+          <input id="verification-code" inputmode="numeric" maxlength="6">
+          <label for="factor-name">Nombre del dispositivo/factor</label>
+          <input id="factor-name" value="Teléfono principal">
+          <button id="finish-enroll" class="primary-btn">Activar MFA</button>
+        </div>
+      </div>
+
+      <button id="logout-mfa" class="link-btn">Cerrar sesión</button>
+      <div id="mfa-message" class="message"></div>
+    </section>
+  </main>
+  <script type="module" src="/src/mfa.js"></script>
+</body>
+</html>

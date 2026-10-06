@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - SecureAuth</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <strong>SecureAuth</strong>
+      <span class="muted">Panel protegido</span>
+    </div>
+    <button id="logout" class="secondary-btn">Cerrar sesión</button>
+  </header>
+
+  <main class="dashboard">
+    <section class="hero">
+      <span class="badge">Acceso concedido</span>
+      <h1>Dashboard seguro</h1>
+      <p>Esta pantalla solo debe ser alcanzable después de completar los factores requeridos.</p>
+    </section>
+
+    <section class="grid">
+      <article class="info-card">
+        <h3>Usuario</h3>
+        <p id="user-email">Cargando...</p>
+      </article>
+      <article class="info-card">
+        <h3>Correo</h3>
+        <p id="email-status">Cargando...</p>
+      </article>
+      <article class="info-card">
+        <h3>MFA</h3>
+        <p id="mfa-status">Cargando...</p>
+      </article>
+      <article class="info-card">
+        <h3>UID</h3>
+        <p id="user-uid" class="mono">Cargando...</p>
+      </article>
+    </section>
+
+    <section class="info-card">
+      <h2>Controles implementados</h2>
+      <ul class="security-list">
+        <li>Autenticación con correo y contraseña</li>
+        <li>Verificación de propiedad del correo</li>
+        <li>Política de contraseña fuerte</li>
+        <li>Validación DNS del dominio durante registro</li>
+        <li>Segundo factor MFA mediante SMS</li>
+        <li>Protección de ruta mediante estado de Firebase Auth</li>
+      </ul>
+    </section>
+  </main>
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+</html>

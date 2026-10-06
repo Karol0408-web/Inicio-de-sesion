@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar correo - SecureAuth</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <main class="center-shell">
+    <section class="auth-card">
+      <span class="badge">Verificación requerida</span>
+      <h1>Verifica tu correo</h1>
+      <p id="verify-text" class="muted"></p>
+      <button id="resend" class="primary-btn">Reenviar correo</button>
+      <button id="refresh" class="secondary-btn">Ya lo verifiqué</button>
+      <button id="logout" class="link-btn">Cerrar sesión</button>
+      <div id="verify-message" class="message"></div>
+    </section>
+  </main>
+  <script type="module" src="/src/verify-email.js"></script>
+</body>
+</html>

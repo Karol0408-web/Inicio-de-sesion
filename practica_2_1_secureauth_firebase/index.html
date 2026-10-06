@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureAuth - Práctica 2.1</title>
+  <link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="brand-panel">
+      <span class="badge">Práctica 2.1</span>
+      <h1>SecureAuth</h1>
+      <p>Módulo de inicio de sesión seguro con Firebase Authentication.</p>
+      <ul class="security-list">
+        <li>✓ Validación de correo y dominio</li>
+        <li>✓ Política de contraseña segura</li>
+        <li>✓ Contraseñas gestionadas por Firebase Auth</li>
+        <li>✓ Verificación de correo</li>
+        <li>✓ MFA mediante SMS</li>
+      </ul>
+    </section>
+
+    <section class="auth-card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Iniciar sesión</button>
+        <button class="tab" data-tab="register">Crear cuenta</button>
+      </div>
+
+      <div id="login-panel">
+        <h2>Bienvenido</h2>
+        <p class="muted">Correo → contraseña → segundo factor → acceso.</p>
+        <form id="login-form">
+          <label for="login-email">Correo electrónico</label>
+          <input id="login-email" type="email" autocomplete="email" required>
+
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" type="password" autocomplete="current-password" required>
+
+          <button class="primary-btn" type="submit">Iniciar sesión</button>
+        </form>
+        <button id="reset-password" class="link-btn">¿Olvidaste tu contraseña?</button>
+        <div id="login-message" class="message"></div>
+      </div>
+
+      <div id="register-panel" class="hidden">
+        <h2>Crear cuenta</h2>
+        <p class="muted">La contraseña nunca se almacena en texto plano por esta aplicación.</p>
+        <form id="register-form">
+          <label for="register-email">Correo electrónico</label>
+          <input id="register-email" type="email" autocomplete="email" required>
+          <div id="domain-status" class="field-status"></div>
+
+          <label for="register-password">Contraseña</label>
+          <input id="register-password" type="password" autocomplete="new-password" required>
+
+          <div class="password-rules">
+            <div data-rule="length">✗ Mínimo 8 caracteres</div>
+            <div data-rule="upper">✗ Una mayúscula</div>
+            <div data-rule="lower">✗ Una minúscula</div>
+            <div data-rule="number">✗ Un número</div>
+            <div data-rule="special">✗ Un carácter especial</div>
+          </div>
+
+          <label for="register-confirm">Confirmar contraseña</label>
+          <input id="register-confirm" type="password" autocomplete="new-password" required>
+
+          <button class="primary-btn" type="submit">Crear cuenta</button>
+        </form>
+        <div id="register-message" class="message"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

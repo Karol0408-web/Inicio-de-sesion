@@ -1,0 +1,217 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18212f;
+  background: #f3f6fb;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #e7efff, #f3f6fb 45%);
+}
+
+button, input { font: inherit; }
+
+.auth-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  gap: 50px;
+  align-items: center;
+}
+
+.brand-panel h1, .center-shell h1, .hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 10px 0;
+  letter-spacing: -0.04em;
+}
+
+.brand-panel p { max-width: 560px; font-size: 1.1rem; color: #5c6675; }
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #e9eefb;
+  color: #3856a8;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.security-list {
+  padding-left: 20px;
+  color: #455064;
+}
+
+.security-list li { margin: 10px 0; }
+
+.auth-card, .info-card {
+  background: rgba(255,255,255,.94);
+  border: 1px solid #e3e8f0;
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 18px 45px rgba(30, 45, 75, .09);
+}
+
+.auth-card.wide { max-width: 620px; width: 100%; }
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f0f3f8;
+  border-radius: 12px;
+  padding: 4px;
+  margin-bottom: 28px;
+}
+
+.tab {
+  border: 0;
+  padding: 11px;
+  background: transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  color: #596273;
+}
+
+.tab.active {
+  background: white;
+  color: #18212f;
+  font-weight: 700;
+  box-shadow: 0 2px 7px rgba(0,0,0,.07);
+}
+
+label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: 650;
+  font-size: .9rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cfd6e2;
+  border-radius: 10px;
+  padding: 12px 13px;
+  outline: none;
+  background: white;
+}
+
+input:focus {
+  border-color: #5574d8;
+  box-shadow: 0 0 0 3px rgba(85,116,216,.13);
+}
+
+.primary-btn, .secondary-btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.primary-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: #3156c9;
+  color: white;
+}
+
+.secondary-btn {
+  background: #eef1f6;
+  color: #283346;
+}
+
+.link-btn {
+  border: 0;
+  background: transparent;
+  color: #3156c9;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.muted { color: #687386; }
+
+.password-rules {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f7f8fb;
+  font-size: .87rem;
+  color: #b34444;
+}
+
+.password-rules div { margin: 4px 0; }
+.password-rules div.valid { color: #18784b; }
+
+.field-status {
+  margin-top: 7px;
+  font-size: .85rem;
+}
+.field-status.valid { color: #18784b; }
+.field-status.invalid { color: #b34444; }
+.field-status.checking { color: #876c12; }
+
+.message {
+  margin-top: 16px;
+  min-height: 20px;
+  font-size: .9rem;
+}
+.message.error { color: #b34444; }
+.message.success { color: #18784b; }
+
+.hidden { display: none !important; }
+
+.center-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5vw;
+  background: white;
+  border-bottom: 1px solid #e4e8ef;
+}
+
+.topbar strong { margin-right: 12px; }
+
+.dashboard {
+  max-width: 1100px;
+  margin: auto;
+  padding: 55px 25px;
+}
+
+.hero { margin-bottom: 30px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.info-card h2, .info-card h3 { margin-top: 0; }
+.mono { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .82rem; word-break: break-all; }
+
+#recaptcha-container, #login-recaptcha {
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+  .auth-shell { grid-template-columns: 1fr; padding: 25px; }
+  .brand-panel { text-align: center; }
+  .security-list { display: inline-block; text-align: left; }
+  .grid { grid-template-columns: 1fr; }
+}
